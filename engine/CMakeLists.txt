@@ -36,7 +36,8 @@ add_library(engine
   event.cpp
   events.cpp
   settings.cpp
-  engine.cpp)
+  engine.cpp
+)
 
 target_compile_features(engine PUBLIC cxx_std_17)
 target_include_directories(engine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
