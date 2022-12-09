@@ -25,10 +25,7 @@ const std::unordered_map<std::string, Reaction> key_bindings = {
      []() {
          return std::make_unique<Move>(Vec{0, -1});
      }},
-    {"R",
-     []() {
-         return std::make_unique<Rest>(Vec{0, 0});
-     }},
+    {"R", []() { return std::make_unique<Rest>(); }},
 
 };
 

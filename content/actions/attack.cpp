@@ -6,5 +6,5 @@ Attack::Attack(Actor& defender) : defender{defender} {}
 
 Result Attack::perform(Engine&) {
     actor->attack(defender);
-    return success;
+    return success();
 }
