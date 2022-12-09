@@ -1,6 +1,11 @@
+#include "wander.h"
+
 #include <iostream>
 
+#include "engine.h"
 #include "move.h"
+#include "randomness.h"
+#include "rest.h"
 
 Result Wander::perform(Engine& engine) {
     Vec pos = actor->get_position();
@@ -14,4 +19,5 @@ Result Wander::perform(Engine& engine) {
             return alternative(Move{direction});
         }
     }
+    return alternative(Rest{});
 }

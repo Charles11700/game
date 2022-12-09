@@ -8,7 +8,7 @@ int main() {
     Engine engine{settings};
 
     engine.create_hero(Heros::dragon);
-    engine.create_monster(Monster::goblin);
-    engine.create_monster(Monster::zombie);
+    engine.create_monster(Monsters::goblin());
+    // engine.create_monster(Monster::zombie());
     engine.run();
 }

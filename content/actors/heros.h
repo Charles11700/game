@@ -1,6 +1,7 @@
 #pragma once
 
 #include "herotype.h"
+#include "mace.h"
 #include "move.h"
 #include "none.h"
 #include "rest.h"
@@ -32,7 +33,8 @@ const std::unordered_map<std::string, Reaction> key_bindings = {
 };
 
 constexpr int default_speed{8};
-const HeroType nobody{"none", default_speed, 1, std::make_shared<None>(), {}};
-const HeroType dragon{"dragon", default_speed, 1, std::make_shared<None>(),
+// const HeroType nobody{"none", default_speed, 1, std::make_shared<None>(),
+// {}};
+const HeroType dragon{"dragon", default_speed, 1, std::make_shared<Mace>(2),
                       key_bindings};
 }  // namespace Heros
