@@ -5,6 +5,7 @@
 #include "engine.h"
 #include "event.h"
 #include "hit.h"
+#include "take_health.h"
 
 constexpr int duration = 5;
 
@@ -42,4 +43,5 @@ void Swing::execute(Engine&) {
 void Swing::when_done(Engine& engine) {
     sprite = copy;
     engine.events.add(Hit{defender, damage});
+    engine.events.add(TakeHealth(defender, damage));
 }
