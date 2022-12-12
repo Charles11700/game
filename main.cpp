@@ -13,9 +13,13 @@ int main() {
         MonsterType new_monster_type = goblin();
         engine.create_monster(new_monster_type);
     }
-    /* for (int i = 0; i < 10; ++i) {
-        MonsterType zombie = zombie();
-        engine.create_monster(zombie);
-    } */
+    /*for (int i = 0; i < 10; ++i) {
+        MonsterType new_monster_type2 = demon();
+        engine.create_monster(new_monster_type2);
+    }
+    for (int i = 0; i < 10; ++i) {
+        MonsterType new_monster_type3 = zombie();
+        engine.create_monster(new_monster_type3);
+    }*/
     engine.run();
 }
