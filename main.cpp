@@ -9,12 +9,13 @@ int main() {
     Engine engine{settings};
 
     engine.create_hero(Heros::dragon);
-    MonsterType new_monster_type = goblin();
     for (int i = 0; i < 20; ++i) {
+        MonsterType new_monster_type = goblin();
         engine.create_monster(new_monster_type);
     }
-    /* MonsterType zombie = zombie();
-    for (int i = 0; i < 10; ++i) {
+    /* for (int i = 0; i < 10; ++i) {
+        MonsterType zombie = zombie();
         engine.create_monster(zombie);
-    }*/
+    } */
+    engine.run();
 }
