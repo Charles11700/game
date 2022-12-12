@@ -5,7 +5,8 @@
 
 class Swing : public Event {
 public:
-    Swing(Sprite& sprite, Vec direction, Actor& defender, int damage);
+    Swing(Sprite& sprite, Vec direction, Actor& defender, Actor& attacker,
+          int damage);
     //                                           ^needed for hit^
     void execute(Engine& engine) override;
     void when_done(Engine& engine) override;
@@ -16,4 +17,5 @@ private:
     Actor& defender;
     int damage;
     double starting_angle, delta;
+    Actor& attacker;
 };

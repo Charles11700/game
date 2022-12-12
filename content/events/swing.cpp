@@ -9,11 +9,13 @@
 
 constexpr int duration = 5;
 
-Swing::Swing(Sprite& sprite, Vec direction, Actor& defender, int damage)
+Swing::Swing(Sprite& sprite, Vec direction, Actor& defender, Actor& attacker,
+             int damage)
     : Event{duration},
       sprite{sprite},
       copy{sprite},
       defender{defender},
+      attacker{attacker},
       damage{damage} {
     // set starting_angle
     // set delta (which rotation direction)
@@ -43,5 +45,5 @@ void Swing::execute(Engine&) {
 void Swing::when_done(Engine& engine) {
     sprite = copy;
     engine.events.add(Hit{defender, damage});
-    engine.events.add(TakeHealth(defender, damage));
+    engine.events.add(TakeHealth(attacker, damage));
 }
