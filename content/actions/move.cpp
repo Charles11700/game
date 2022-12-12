@@ -4,6 +4,7 @@
 
 #include "actor.h"
 #include "attack.h"
+#include "closedoor.h"
 #include "engine.h"
 #include "opendoor.h"
 
